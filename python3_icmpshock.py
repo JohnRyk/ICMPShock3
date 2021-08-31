@@ -84,6 +84,9 @@ def doWork(payload,method):
 
 if __name__ == "__main__":
 
+    if len(sys.argv) != 3:
+        banner()
+        sys.exit(0)
     listener_ip = sys.argv[1]
     target_file = sys.argv[2]
     targets = open(target_file, "r")
@@ -91,8 +94,8 @@ if __name__ == "__main__":
     method = "POST"         # GET|POST
 
     mode = "ping"
-    # call_back_ip = "192.168.2.1"
-    # call_back_port = "4444"
+    #call_back_ip = "10.10.0.39"
+    #call_back_port = "4444"
 
 
     if mode == "ping":
